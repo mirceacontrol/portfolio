@@ -3,6 +3,21 @@ import { Github } from "lucide-react";
 
 const modernProjects = [
   {
+    title: "Employee Time Tracker",
+    url: "https://github.com/mirceacontrol/employee-time-tracker",
+    description:
+      "A modern backend application for tracking employee hours, work sessions, and holidays. Built with .NET, EF Core, SQL Server, Docker. Includes full CRUD for employees, Swagger UI, persistent SQL DB, easy Docker Compose workflow.",
+    features: [
+      "Employee CRUD API",
+      "Work session & holiday tracking",
+      "Swagger UI docs for all endpoints",
+      "SQL Server integration (persistent, Dockerized)",
+      "One-command Docker Compose setup",
+      "Deployable to any cloud/Docker host",
+      "Other features WIP",
+    ],
+  },
+  {
     title: "README Generator",
     url: "https://github.com/mirceacontrol/readme-generator",
     live: "https://mirceacontrol.github.io/readme-generator/",
@@ -26,6 +41,7 @@ const modernProjects = [
       "Backend API proxy with Node/Express",
       "Real event search, safe API key storage",
       "Wishlist, search, and filter features",
+      "Other features WIP",
     ],
   },
   {

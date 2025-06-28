@@ -2,18 +2,19 @@ import { useState } from "react";
 import { Crown } from "lucide-react";
 
 const codingLanguages = [
-  { name: "Java", level: 90, favorite: true },
-  { name: "C#", level: 80 },
-  { name: "C/C++", level: 75 },
-  { name: "Python", level: 70 },
-  { name: "Shell", level: 65 },
-  { name: "SQL", level: 80 },
-  { name: "HTML / CSS", level: 85 },
-  { name: "Assembly x86", level: 60 },
+  { name: "Java", level: 70, favorite: true },
+  { name: "JavaScript", level: 55 },
+  { name: "C#", level: 50 },
+  { name: "C/C++", level: 55 },
+  { name: "Python", level: 65 },
+  { name: "Shell", level: 35 },
+  { name: "SQL", level: 70 },
+  { name: "HTML / CSS", level: 70 },
+  { name: "Assembly x86", level: 25 },
 ];
 
 const technologies = [
-  "Docker", "GitHub (VCS)", "QT Designer", "JavaFX", "Photo/Video Editing"
+  "Docker", "GitHub (VCS)", "React", "Vite", "Tailwind CSS", "QT Designer", "JavaFX", "Photo/Video Editing"
 ];
 
 const ides = [
@@ -57,6 +58,16 @@ export default function SkillsSection() {
           onClick={() => setSlide(2)}
         >
           IDEs
+        </button>
+        <button
+          className={`px-4 py-2 rounded-lg transition font-semibold ${
+            slide === 3
+              ? "bg-purple-700 text-white shadow"
+              : "bg-gray-800 text-gray-300 hover:bg-purple-700 hover:text-white"
+          }`}
+          onClick={() => setSlide(3)}
+        >
+          Spoken Languages
         </button>
       </div>
 
@@ -104,6 +115,20 @@ export default function SkillsSection() {
                 {ide}
               </div>
             ))}
+          </div>
+        )}
+        {slide === 3 && (
+          <div className="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col gap-2 max-w-md mx-auto">
+            <div>
+              <span className="font-bold text-purple-200 mr-2">Romanian:</span>
+              <span className="text-gray-200">Native</span>
+            </div>
+            <div>
+              <span className="font-bold text-purple-200 mr-2">English:</span>
+              <span className="text-gray-200">
+                Reading C1, Writing C1, Speaking C2, Listening B2, General C1
+              </span>
+            </div>
           </div>
         )}
       </div>
