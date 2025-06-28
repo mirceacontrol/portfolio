@@ -112,7 +112,7 @@ function App() {
           </h1>
           <h3 className="text-2xl mb-4 font-semibold text-gray-300">Aspiring Software Developer</h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-6">
-            <a href="/cv.pdf" download className="px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition shadow">
+            <a href={`${import.meta.env.BASE_URL}cv.pdf`} download className="px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition shadow">
               Download CV
             </a>
           </div>
